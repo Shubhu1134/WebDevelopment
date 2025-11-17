@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrica - Electricity Service</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #fdb714;
+            --secondary-color: #1a1a1a;
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ff8c00" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control-prev {
+            left: 30px;
+        }
+
+        .carousel-control-next {
+            right: 30px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 35px;
+            font-weight: 600;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #e5a613;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        .service-card {
+            padding: 40px 30px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            height: 100%;
+            text-align: center;
+        }
+
+        .service-card.yellow {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .service-card.black {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .btn-read-more {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .service-card.black .btn-read-more {
+            background-color: var(--primary-color);
+        }
+
+        .btn-read-more:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+        }
+
+        .about-content {
+            padding: 40px;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .testimonial-name h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-text {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .quote-icon {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23333" width="1200" height="400"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            margin-bottom: 30px;
+        }
+
+        .btn-outline-custom {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 12px 35px;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline-custom:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-form {
+            padding: 40px;
+        }
+
+        .form-control {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+        }
+
+        .map-container {
+            height: 100%;
+            min-height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background-color: #333;
+            color: white;
+        }
+
+        .newsletter-form button {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>ELECTRICITY SERVICE</h1>
+            <p>Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet embarrassing hidden</p>
+            <button class="btn btn-primary-custom">Read More</button>
+        </div>
+        <button class="carousel-control-prev" type="button">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-control-next" type="button">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+
+   
+    <section class="services-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card yellow">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Residential Services</h3>
+                        <p>alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything</p>
+                        <button class="btn btn-read-more">READ MORE</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card black">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Commercial Services</h3>
+                        <p>alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything</p>
+                        <button class="btn btn-read-more">READ MORE</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card yellow">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrial Services</h3>
+                        <p>alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything</p>
+                        <button class="btn btn-read-more">READ MORE</button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card yellow">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Electrical Services</h3>
+                        <p>alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything</p>
+                        <button class="btn btn-read-more">READ MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>ABOUT OUR ELECTRICITY COMPANY</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2>Slightly believable. If you are going</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                        <button class="btn btn-primary-custom">Read More</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23006080' width='600' height='400'/><circle cx='300' cy='200' r='80' fill='%23fdb714' opacity='0.3'/><circle cx='300' cy='200' r='50' fill='%23fdb714'/></svg>" alt="About Us">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customers Testimonial</h2>
+            </div>
+            <p class="text-center mb-5">Even slightly believable. If you are going to use a passage</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-img"></div>
+                            <div class="testimonial-name">
+                                <h4>Markro</h4>
+                            </div>
+                        </div>
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary-custom me-2"><i class="fas fa-chevron-left"></i></button>
+                        <button class="btn btn-primary-custom"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Do you need any help for <span style="color: var(--primary-color);">electricity</span> ?</h2>
+            <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Lorem Ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <button class="btn btn-primary-custom">GET A QUOTE</button>
+            <button class="btn btn-outline-custom">CALL NOW</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control" placeholder="Phone Number">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <textarea class="form-control" placeholder="Message"></textarea>
+                        <button class="btn btn-primary-custom">SEND</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt fa-3x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Testimonial</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Blog</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h5>Newsletter</h5>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter Your Email">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>2024 All Rights Reserved. Design by Free Html Templates Distribution by ThemeWagon</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

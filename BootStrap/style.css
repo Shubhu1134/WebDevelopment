@@ -1,0 +1,161 @@
+ :root {
+            --primary-color: #fdb714;
+            --secondary-color: #1a1a1a;
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+ .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ff8c00" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control-prev {
+            left: 30px;
+        }
+
+        .carousel-control-next {
+            right: 30px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 35px;
+            font-weight: 600;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #e5a613;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        .service-card {
+            padding: 40px 30px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            height: 100%;
+            text-align: center;
+        }
+
+        .service-card.yellow {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .service-card.black {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .btn-read-more {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .service-card.black .btn-read-more {
+            background-color: var(--primary-color);
+        }
+
+        .btn-read-more:hover {
+            transform: scale(1.05);
+        }
