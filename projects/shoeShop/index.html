@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Shop - Premium Shoes</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f8f9fa;
+        font-family: Arial;
+      }
+
+      .hero {
+        height: 90vh;
+        background: url("https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=1500&q=80")
+          center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      }
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+      }
+      .hero p {
+        font-size: 1.3rem;
+      }
+
+      .category-img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .product-img {
+        height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .offer-banner {
+        background: url("https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1500&q=80")
+          center/cover;
+        height: 45vh;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      }
+
+      .testimonial-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background: #111;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">ShoeShop</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#categories">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#featured">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trending">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero text-center">
+      <div>
+        <h1>Premium Shoe Collection</h1>
+        <p>Your Comfort, Style & Confidence</p>
+        <a href="#featured" class="btn btn-light btn-lg mt-3">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="container py-5">
+      <h2 class="text-center mb-4 fw-bold">Shop by Category</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="assets/p4.jpg" class="category-img w-100" />
+          <h5 class="text-center mt-2 fw-bold">Running Shoes</h5>
+        </div>
+
+        <div class="col-md-4">
+          <img src="assets/p14.jpg" class="category-img w-100" />
+          <h5 class="text-center mt-2 fw-bold">Sneakers</h5>
+        </div>
+
+        <div class="col-md-4">
+          <img src="assets/p12.jpg" class="category-img w-100" />
+          <h5 class="text-center mt-2 fw-bold">Sports Shoes</h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section id="featured" class="container py-5">
+      <h2 class="text-center fw-bold mb-5">Featured Products</h2>
+
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1582738412151-45c6a5b99559?auto=format&fit=crop&w=900&q=80"
+              class="product-img card-img-top"
+            />
+            <div class="card-body text-center">
+              <h6>Air Runner X10</h6>
+              <p class="text-muted">₹3,499</p>
+              <button class="btn btn-dark w-100">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+              class="product-img card-img-top"
+            />
+            <div class="card-body text-center">
+              <h6>Black Sports Pro</h6>
+              <p class="text-muted">₹2,999</p>
+              <button class="btn btn-dark w-100">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1533560904424-ccf575f8a2df?auto=format&fit=crop&w=900&q=80"
+              class="product-img card-img-top"
+            />
+            <div class="card-body text-center">
+              <h6>Urban Sneakers</h6>
+              <p class="text-muted">₹1,899</p>
+              <button class="btn btn-dark w-100">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1584395630827-860eee694d7b?auto=format&fit=crop&w=900&q=80"
+              class="product-img card-img-top"
+            />
+            <div class="card-body text-center">
+              <h6>Street Casual</h6>
+              <p class="text-muted">₹1,499</p>
+              <button class="btn btn-dark w-100">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="container py-5">
+      <div class="offer-banner text-center">
+        <div>
+          <h2 class="fw-bold">Mega Sale – Flat 50% OFF</h2>
+          <p>Grab the best deals before the stock runs out!</p>
+          <a href="#featured" class="btn btn-light btn-lg">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRENDING -->
+    <section id="trending" class="container py-5">
+      <h2 class="text-center fw-bold mb-4">Trending Now</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="assets/p1.jpg" class="product-img card-img-top" />
+            <div class="card-body text-center">
+              <h6>White Premium</h6>
+              <p class="text-muted">₹2,199</p>
+              <button class="btn btn-dark w-100">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="assets/p2.jpg" class="product-img card-img-top" />
+            <div class="card-body text-center">
+              <h6>Retro Classic</h6>
+              <p class="text-muted">₹1,999</p>
+              <button class="btn btn-dark w-100">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="assets/p3.jpg" class="product-img card-img-top" />
+            <div class="card-body text-center">
+              <h6>Daily Runner</h6>
+              <p class="text-muted">₹1,699</p>
+              <button class="btn btn-dark w-100">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="container py-5">
+      <h2 class="text-center fw-bold mb-4">What Our Customers Say</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <p>
+              "The best shoes I ever purchased! Super comfortable and stylish."
+            </p>
+            <h6 class="fw-bold mt-2">- Rohit Kumar</h6>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <p>"Fast delivery and amazing quality. Worth every rupee!"</p>
+            <h6 class="fw-bold mt-2">- Ayesha Khan</h6>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <p>"Very premium and durable. My go-to shoe shop now."</p>
+            <h6 class="fw-bold mt-2">- Manish Patel</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-5 bg-dark text-light text-center">
+      <h2 class="fw-bold">Subscribe to Our Newsletter</h2>
+      <p class="mb-3">Get latest updates & discounts</p>
+      <input
+        type="email"
+        class="form-control w-50 mx-auto"
+        placeholder="Enter your email"
+      />
+      <button class="btn btn-light mt-3">Subscribe</button>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container py-5">
+      <h2 class="text-center fw-bold mb-4">Contact Us</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form class="card p-4 shadow-sm">
+            <input class="form-control mb-3" placeholder="Your Name" />
+            <input class="form-control mb-3" placeholder="Email" />
+            <textarea
+              class="form-control mb-3"
+              placeholder="Message"
+            ></textarea>
+            <button class="btn btn-dark w-100">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center p-3">
+      © 2025 ShoeShop — All Rights Reserved
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

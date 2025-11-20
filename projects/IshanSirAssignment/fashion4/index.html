@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ashion | Fashion eCommerce Template</title>
+    <!-- FontAwesome for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <a href="#">ASHION</a>
+          </div>
+          <nav class="nav-menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Women's</a>
+            <a href="#">Men's</a>
+            <a href="#">Shop</a>
+            <a href="#">Pages</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+          </nav>
+          <div class="header-icons">
+            <span>Login / Register</span>
+            <div class="icon-wrap"><i class="fas fa-search"></i></div>
+            <div class="icon-wrap">
+              <i class="far fa-heart"></i>
+              <div class="badge">2</div>
+            </div>
+            <div class="icon-wrap">
+              <i class="fas fa-shopping-bag"></i>
+              <div class="badge">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-subtitle">Women’s fashion</span>
+          <h1 class="hero-title">Sitamet, consectetur adipiscing elit.</h1>
+          <p class="hero-desc">Laborum sed do eiusmod tempor incididunt.</p>
+          <a href="#" class="btn-link">Shop now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories (Fixed Grid) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="categories-grid">
+          <!-- Large Left (Men) -->
+          <div class="cat-item large-item">
+            <img src="./img/banner/banner-1.jpg" alt="Men" />
+            <div class="cat-text">
+              <h2>Men’s fashion</h2>
+              <p>358 items</p>
+              <a href="#" class="btn-link">Shop now</a>
+            </div>
+          </div>
+
+          <!-- Middle Stacked (Kids & Cosmetics) -->
+          <div class="cat-item middle-column">
+            <div class="cat-item-inner">
+              <img src="./img/" alt="Kids" />
+              <div class="cat-text">
+                <h2>Kid’s fashion</h2>
+                <p>273 items</p>
+                <a href="#" class="btn-link">Shop now</a>
+              </div>
+            </div>
+            <div class="cat-item-inner">
+              <img src="./img/trend/bs-1.jpg" alt="Cosmetics" />
+              <div class="cat-text">
+                <h2>Cosmetics</h2>
+                <p>159 items</p>
+                <a href="#" class="btn-link">Shop now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large Right (Accessories) -->
+          <div class="cat-item large-item">
+            <img src="./img/categories/category-2.jpg" alt="Accessories" />
+            <div class="cat-text">
+              <h2>Accessories</h2>
+              <p>792 items</p>
+              <a href="#" class="btn-link">Shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Product Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="product-header">
+          <h2 class="section-title">New Product</h2>
+          <div class="filter-controls">
+            <ul>
+              <li class="active-filter" onclick="filterProducts('all', this)">
+                All
+              </li>
+              <li onclick="filterProducts('women', this)">Women’s</li>
+              <li onclick="filterProducts('men', this)">Men’s</li>
+              <li onclick="filterProducts('kid', this)">Kid’s</li>
+              <li onclick="filterProducts('accessories', this)">Accessories</li>
+              <li onclick="filterProducts('cosmetics', this)">Cosmetics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <!-- Item 1: Women -->
+          <div class="product-item women">
+            <div class="product-img">
+              <img src="./img/product/product-1.jpg" alt="Product" />
+              <div class="product-badge badge-new">New</div>
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Buttons tweed blazer</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <div class="price">$ 59.0</div>
+            </div>
+          </div>
+
+          <!-- Item 2: Men -->
+          <div class="product-item men">
+            <div class="product-img">
+              <img
+                src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80"
+                alt="Product"
+              />
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Slim striped pocket shirt</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="far fa-star"></i>
+              </div>
+              <div class="price">$ 59.0</div>
+            </div>
+          </div>
+
+          <!-- Item 3: Kid -->
+          <div class="product-item kid">
+            <div class="product-img">
+              <img src="./img/product/product-3.jpg" alt="Product" />
+              <div class="product-badge badge-sale">Sale</div>
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Cotton T-Shirt</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <div class="price">$ 59.0</div>
+            </div>
+          </div>
+
+          <!-- Item 4: Accessories -->
+          <div class="product-item accessories">
+            <div class="product-img">
+              <img src="./img/product/product-4.jpg" alt="Product" />
+              <div class="product-badge badge-stock">Out of stock</div>
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Fit micro corduroy shirt</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <div class="price">$ 59.0</div>
+            </div>
+          </div>
+
+          <!-- Item 5: Cosmetics -->
+          <div class="product-item cosmetics">
+            <div class="product-img">
+              <img src="./img/product/product-6.jpg" alt="Product" />
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Contrasting sunglasses</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <div class="price">$ 59.0</div>
+            </div>
+          </div>
+
+          <!-- Item 6: Women -->
+          <div class="product-item women">
+            <div class="product-img">
+              <img
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=720&q=80"
+                alt="Product"
+              />
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Tropical Kimono</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <div class="price">$ 49.0 <span>$ 59.0</span></div>
+            </div>
+          </div>
+
+          <!-- Item 7: Accessories -->
+          <div class="product-item accessories">
+            <div class="product-img">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                alt="Product"
+              />
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Water resistant backpack</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <div class="price">$ 59.0</div>
+            </div>
+          </div>
+
+          <!-- Item 8: Cosmetics -->
+          <div class="product-item cosmetics">
+            <div class="product-img">
+              <img src="./img/product/product-8.jpg" alt="Product" />
+              <div class="product-icons">
+                <a href="#"><i class="fas fa-expand-arrows-alt"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <h6><a href="#">Lipstick Shade Red</a></h6>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <div class="price">$ 29.0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Section -->
+    <div class="banner-section">
+      <!-- Empty overlay div for stylistic purposes if needed -->
+      <div class="banner-content">
+        <div class="timer">
+          <div class="timer-item">
+            <div id="days">30</div>
+            <span>Day</span>
+          </div>
+          <div class="timer-item">
+            <div id="hours">12</div>
+            <span>Hour</span>
+          </div>
+          <div class="timer-item">
+            <div id="minutes">45</div>
+            <span>Min</span>
+          </div>
+          <div class="timer-item">
+            <div id="seconds">05</div>
+            <span>Sec</span>
+          </div>
+        </div>
+        <h2 class="banner-title">Summer 2019</h2>
+        <p class="banner-subtitle">SALE 50%</p>
+        <a href="#" class="btn-link">Shop now</a>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="services-grid">
+          <div class="service-item">
+            <i class="fas fa-car-side"></i>
+            <div>
+              <h6>Free Shipping</h6>
+              <p>For all order over $99</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <i class="far fa-money-bill-alt"></i>
+            <div>
+              <h6>Money Back Guarantee</h6>
+              <p>If good have Problems</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-headset"></i>
+            <div>
+              <h6>Online Support 24/7</h6>
+              <p>Dedicated support</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <i class="far fa-credit-card"></i>
+            <div>
+              <h6>Payment Secure</h6>
+              <p>100% secure payment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <div class="insta-grid">
+      <div class="insta-item">
+        <img
+          src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+          alt="IG"
+        />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="./img/product/product-8.jpg" alt="IG" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="./img/product/product-4.jpg" alt="IG" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img
+          src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+          alt="IG"
+        />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+          alt="IG"
+        />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img
+          src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
+          alt="IG"
+        />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="#" class="footer-logo">ASHION</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt cilisis.
+            </p>
+            <div class="payment-icons">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-paypal"></i>
+            </div>
+          </div>
+          <div class="footer-widget">
+            <h6>Quick Links</h6>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h6>Account</h6>
+            <ul>
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Orders Tracking</a></li>
+              <li><a href="#">Checkout</a></li>
+              <li><a href="#">Wishlist</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h6>Newsletter</h6>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Email" />
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            Copyright © 2025 All rights reserved | This template is made with
+            <i class="fas fa-heart"></i> by <a href="#">Colorlib</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
