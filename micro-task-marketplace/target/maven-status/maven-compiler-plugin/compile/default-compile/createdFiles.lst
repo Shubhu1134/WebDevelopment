@@ -1,0 +1,13 @@
+com/freelance/models/User.class
+com/freelance/controllers/TaskServlet.class
+com/freelance/controllers/ChatServlet.class
+com/freelance/models/Message.class
+com/freelance/controllers/ApplyTaskServlet.class
+com/freelance/models/Application.class
+com/freelance/dao/ApplicationDAO.class
+com/freelance/controllers/AuthServlet.class
+com/freelance/utils/DBConnection.class
+com/freelance/dao/UserDAO.class
+com/freelance/dao/MessageDAO.class
+com/freelance/models/Task.class
+com/freelance/dao/TaskDAO.class
